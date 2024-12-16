@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--index: calc(1vw + 1vh);
+	--color-header: #f4efec;
+	--color-text: #cdc6c3;
+	--gallery-gap: calc(var(--index) * 7.5)
+}
+@font-face {
+	font-family: raleway-c;
+	src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+	font-family: outfit-c;
+	src: url(../fonts/outfit-regular.woff2);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: outfit-c;
+}
+
+.content, .hero, .main-header, .gallery > * {
+	will-change: transform;
+
+	}
+	body {
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+    background-size: cover;
+	color: #f1f1f1;
+	font-family:'Avenir Next Cyr', sans-serif;
+	}
+
+	nav{
+		width: 100%;
+		background: #ffffff;
+		color: #195791;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		padding: 15px 0;
+		z-index: 100;
+		-webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+				box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+	  
+	  .header_fixed {
+		position: fixed;
+		left: 0;
+		top: 0;
+	  }	  
+}
+
+.hero {
+	width: calc(var(--index) * 70);
+	position: absolute;
+	left: 0vw;
+	top: 22vh;
+	z-index: -1;
+}
+.main-header {
+	height: 90vh;
+}
+.container {
+	padding: 0 7vw;
+}
+.main-title span {
+	font-size: calc(var(--index) * 6);
+    line-height: 40px;
+	position: absolute;
+	width: 70%; 
+	bottom: 15vh;
+	line-height: .9;
+	box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2), 0 50px 28px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 12px rgba(80, 79, 79, 0.6);
+	text-transform: uppercase;
+	backdrop-filter: blur(10px);
+	
+}
+
+.gallery {
+	display: flex;
+	padding: calc(var(--index) * 4) 0;
+}
+.gallery > * {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.gallery__item {
+	max-width: calc(var(--index) * 20);
+	margin-bottom: var(--gallery-gap);
+	max-height: 200vh;
+	border-radius: 20px;
+}
+.gallery__left {
+	margin-top: calc(var(--gallery-gap) * 4.75);
+}
+.gallery__right .gallery__item {
+	margin: 0;
+	margin-top: var(--gallery-gap);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	color: #1a3e68;
+}
+.text-block {
+	color: var(--color-text);
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	color: #205591;
+}
+.text-block__h {
+	line-height: 1;
+	color: var(--color-header);
+	margin-bottom: 1.5rem;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	color: #e7880b;
+}
+.text-block__p {
+	line-height: 1;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	color: #1a3e68;
+}
